@@ -91,7 +91,8 @@ class TokensResolver:
 
     def resolve(self):
         cls = self.tokenizerConfig['tokenizer_class']
-        if (cls == 'PreTrainedTokenizerFast' or
+        if (cls == 'PreTrainedTokenizer' or
+            cls == 'PreTrainedTokenizerFast' or
             cls == 'LlamaTokenizerFast' or
             cls == 'Qwen2Tokenizer'):
             return self.resolvePreTrainedTokenizerFast()
